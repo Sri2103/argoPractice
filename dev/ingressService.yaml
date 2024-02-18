@@ -6,10 +6,10 @@ metadata:
     name: myingress
 spec:
   rules:
-   - http:
+  - host: 192.168.67.2 
+    http:
       paths:
-      - host: 192.168.67.2
-        pathType: Prefix
+      - pathType: Prefix
         path: "/"
         backend:
           service:
