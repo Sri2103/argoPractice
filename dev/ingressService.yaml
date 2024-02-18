@@ -10,9 +10,9 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: "/"
+        path: ""
         backend:
           service:
-            name: myapp-nodeport
+            name: http://127.0.0.1:11549
             port: 
               number: 80
