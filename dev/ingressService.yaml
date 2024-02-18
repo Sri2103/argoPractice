@@ -6,7 +6,7 @@ metadata:
     name: myingress
 spec:
   rules:
-  - host: 192.168.67.2 
+  - host: 'myblog' 
     http:
       paths:
       - pathType: Prefix
