@@ -6,12 +6,13 @@ metadata:
     name: myingress
 spec:
   rules:
-  - http:
+  - host: "myblog.example"
+    http:
       paths:
       - pathType: Prefix
         path: "/"
         backend:
           service:
-            name: myapp-nodeport
+            name: myapp-service
             port: 
               number: 80
