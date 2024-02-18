@@ -8,7 +8,7 @@ metadata:
     name: myingress
 spec:
   rules:
-  - host: "myblog.example"
+  - host: "myblog.example.com"
     http:
       paths:
       - pathType: Prefix
