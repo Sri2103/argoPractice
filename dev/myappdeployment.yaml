@@ -18,6 +18,8 @@ spec:
       containers:
       - name: my-container
         image: harsha2103/blog:0.1
+        ports:
+          - containerPort: 4500
         resources:
           limits:
             memory: "128Mi"
