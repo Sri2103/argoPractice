@@ -12,6 +12,6 @@ spec:
         path: "/"
         backend:
           service:
-            name: myapp
+            name: myapp-nodeport
             port: 
               number: 80
