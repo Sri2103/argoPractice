@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/Sri2103/argoPractice.git
-    targetRevision: Head
+    targetRevision: HEAD
     path: dev
   destination:
     server: "https://kubernetes.default.svc"
