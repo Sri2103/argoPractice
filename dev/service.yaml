@@ -6,5 +6,5 @@ spec:
   selector:
     app: my-app
   ports:
-  - port: 4500
+  - port: 80
     targetPort: 4500
