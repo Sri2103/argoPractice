@@ -4,7 +4,8 @@ metadata:
   name: loadbalancer-service
 spec:
   selector:
-    app: my-app
+    # app: my-app
+    name: my-ingress
   ports:
     - port: 80
       targetPort: 8080
