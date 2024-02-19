@@ -7,11 +7,10 @@ metadata:
     ingress.kubernetes.io/add-base-url: "true"
 spec:
   rules:
-  - host: "blog.info.app"
-    http:
+  - http:
       paths:
       - pathType: Prefix
-        path: ""
+        path: "/"
         backend:
           service:
             name: myapp-service
