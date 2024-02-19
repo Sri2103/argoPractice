@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: my-container
-        image: harsha2103/blog:0.15
+        image: harsha2103/blog:0.16
         ports:
           - containerPort: 4500
         resources:
