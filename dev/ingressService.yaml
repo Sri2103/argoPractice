@@ -9,7 +9,14 @@ spec:
   - http:
       paths:
       - pathType: Prefix
-        path: "/"
+        path: "/blog"
+        backend:
+          service:
+            name: myapp-service
+            port: 
+              number: 8080
+      - pathType: Prefix
+        path: "/static"
         backend:
           service:
             name: myapp-service
