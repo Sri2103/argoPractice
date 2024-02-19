@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/Sri2103/argoPractice.git
     targetRevision: HEAD
-    path: db
+    path: db2
     directory:
       recurse: true
   destination:
