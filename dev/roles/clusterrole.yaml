@@ -1,0 +1,36 @@
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: basic-user-role
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  verbs:
+  - get
+  - watch
+- apiGroups:
+  - apps
+  resources:
+  - deployments
+  verbs:
+  - get
+  - watch
+
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: rb-basic-user
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: basic-user-role
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: sri
