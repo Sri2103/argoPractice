@@ -1,24 +1,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: myapp-db-app
+  name: postgres
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/Sri2103/argoPractice.git
-    targetRevision: HEAD
-    path: db
-    directory:
-      recurse: true
+    chart: postgresql
+    repoURL: https://charts.bitnami.com/bitnami
+    targetRevision: 14.1.3
+    helm:
+      releaseName: postgresql
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: database
+    namespace: postgres
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
     automated:
       selfHeal: true
       prune: true
-
-
